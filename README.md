@@ -9,16 +9,18 @@ Mulesoft mailer adapter/transport for Craft 3
 composer require leowebguy/mulesoftmail
 ```
 
-On your Control Panel, go to Settings → Plugins → "Mix Manifest" → Install
+On your Control Panel, go to Settings → Plugins → "Mulesoft Mail" → Install
 
 ...
 
 ### Usage
 
-Go to Settings > Email
+Go to Settings > Email > Select `Mulesoft` as transport type
 
-Select `Mulesoft` as transport type
+![screenshot1](resources/transport.png)
+
+Go to Settings > Mulesoft Mailer > Provide required settings
 
 ![screenshot1](resources/settings.png)
 
-Save it
+Save it!
