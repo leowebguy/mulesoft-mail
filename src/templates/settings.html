@@ -1,0 +1,37 @@
+{% import '_includes/forms' as forms %}
+
+{{ forms.textField({
+    first: true,
+    name: 'mailerAuthEndpoint',
+    label: "Mulesoft Auth Endpoint",
+    instructions: "Provide Mulesoft OAuth endpoint e.g https://my-company.mulesoft.com/access-token"|t,
+    required: true,
+    value: settings.mailerAuthEndpoint
+}) }}
+
+{{ forms.textField({
+    first: true,
+    name: 'mailerId',
+    label: "Mulesoft Auth ID",
+    instructions: "Provide Mulesoft Client ID"|t,
+    required: true,
+    value: settings.mailerId
+}) }}
+
+{{ forms.textField({
+    first: true,
+    name: 'mailerSecret',
+    label: "Mulesoft Auth Secret",
+    instructions: "Provide Mulesoft Secret Key"|t,
+    required: true,
+    value: settings.mailerSecret
+}) }}
+
+{{ forms.textField({
+    first: true,
+    name: 'mailerSendEndpoint',
+    label: "Mailer Sendmail Endpoint (v1.0)",
+    instructions: "Provide Mulesoft Email Services endpoint e.g https://my-company.mulesoft.com/api/v1.0/email"|t,
+    required: true,
+    value: settings.mailerSendEndpoint
+}) }}

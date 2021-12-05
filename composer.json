@@ -1,0 +1,35 @@
+{
+  "name": "leowebguy/mulesoftmail",
+  "description": "Mulesoft mailer adapter for Craft 3",
+  "type": "craft-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Leo",
+      "homepage": "https://github.com/leowebguy"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.2.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.18"
+  },
+  "autoload": {
+    "psr-4": {
+      "leowebguy\\mulesoftmail\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Mulesoft Mailer",
+    "handle": "mulesoftmail",
+    "hasCpSection": false,
+    "hasCpSettings": true,
+    "class": "leowebguy\\mulesoftmail\\Mailer"
+  },
+  "scripts": {
+    "lint": "vendor/bin/php-cs-fixer fix src --dry-run --rules=@PSR2 -vvv",
+    "lint-fix": "vendor/bin/php-cs-fixer fix src --rules=@PSR2 -vvv"
+  }
+}
