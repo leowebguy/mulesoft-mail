@@ -2,6 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## 1.0.0 - 2021.12.03
+## 1.0.0 - 2021.12.04
 ### Initial release
 - Craft 3 plugin initial release
