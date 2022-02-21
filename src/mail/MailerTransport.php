@@ -39,11 +39,11 @@ class MailerTransport extends Transport
             $token = $this->_getAuth($settings);
 
             $client = new Client();
-            $mailer = $client->post($settings['mailerSendEndpoint'], [
+            $mailer = $client->post(App::parseEnv($settings['mailerSendEndpoint']), [
                 //'debug' => TRUE,
                 'headers' => [
-                    'client_id' => $settings['mailerId'],
-                    'client_secret' => $settings['mailerSecret'],
+                    'client_id' => App::parseEnv($settings['mailerId']),
+                    'client_secret' => App::parseEnv($settings['mailerSecret']),
                     'Authorization' => 'Bearer ' . $token,
                     'Content-Type' => 'text/plain'
                 ],
@@ -70,12 +70,12 @@ class MailerTransport extends Transport
     {
         try {
             $client = new Client();
-            $auth = $client->get($settings['mailerAuthEndpoint'], [
+            $auth = $client->get(App::parseEnv($settings['mailerAuthEndpoint']), [
                 //'debug' => TRUE,
                 'headers' => [
                     'Accept' => '*/*',
-                    'client_id' => $settings['mailerId'],
-                    'client_secret' => $settings['mailerSecret'],
+                    'client_id' => App::parseEnv($settings['mailerId']),
+                    'client_secret' => App::parseEnv($settings['mailerSecret']),
                     'grant_type' => 'client_credentials',
                     'scope' => 'WRITE'
                 ]
