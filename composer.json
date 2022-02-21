@@ -2,7 +2,7 @@
   "name": "leowebguy/mulesoftmail",
   "description": "Mulesoft mailer adapter for Craft 3",
   "type": "craft-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "authors": [
     {
