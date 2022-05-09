@@ -25,7 +25,7 @@ class MailerAdapter extends BaseTransportAdapter
     // Public Methods
     // =========================================================================
 
-    public function defineTransport()
+    public function defineTransport(): \Symfony\Component\Mailer\Transport\AbstractTransport|array
     {
         return new MailerTransport();
     }

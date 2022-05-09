@@ -59,12 +59,12 @@ class Mailer extends Plugin
     // Public Methods
     // =========================================================================
 
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?\craft\base\Model
     {
         return new MailerModel();
     }
 
-    protected function settingsHtml()
+    protected function settingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate('mulesoftmail/settings', [
             'settings' => $this->getSettings(),
